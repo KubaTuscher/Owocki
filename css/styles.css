@@ -159,7 +159,12 @@ background: none;
   }
   .navbar{
     margin-bottom: 0;
+    height: 0;
   }
+  .navbar-default{
+    padding: 0;
+  }
+
   .navbar-collapse {
     background-color: #f9f8fb;
     text-align: center;
