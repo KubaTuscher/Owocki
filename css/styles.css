@@ -69,6 +69,9 @@ background: none;
   border: none;
   padding: 5rem 0 0;
 }
+.navbar-fixed-top{
+  z-index:3;
+}
 
 .navbar-default .navbar-nav,
 .navbar-default .navbar-nav > li > a:hover,
@@ -80,6 +83,7 @@ background: none;
 
 .navbar-brand {
   margin-top: -2.2rem;
+  padding-left: 0;
 }
 
 .affix {
@@ -90,6 +94,9 @@ background: none;
 
 .navbar-default li {
   padding: 0 1rem;
+}
+.navbar-default li:last-child{
+  padding-right: 0;
 }
 
 .navbar-default li a {
@@ -164,7 +171,6 @@ background: none;
   .navbar-default{
     padding: 0;
   }
-
   .navbar-collapse {
     background-color: #f9f8fb;
     text-align: center;
@@ -200,6 +206,7 @@ background: none;
   .navbar-brand img {
     height: 6rem;
     margin-top: 2.5rem;
+    padding-left: 1.5rem;
   }
   .navbar-toggle{
     margin-top: 2.5rem;
@@ -233,7 +240,7 @@ background: none;
   font-family: Raleway, sans-serif;
   font-size: 8rem;
   margin-bottom: 2rem;
-  margin-left: -0.6rem;
+  margin-left: -0.3rem;
   color: #262626;
 }
 
@@ -307,7 +314,7 @@ background: none;
   padding: 9% 0;
 }
 
-.section2_content h1 {
+.section2_content h2 {
   font-family: RalewayBold, sans-serif;
   font-size: 7rem;
   margin-top: 0;
@@ -324,7 +331,7 @@ background: none;
     background-position: -5rem;
   }
 
-  .section2_content h1 {
+  .section2_content h2 {
     font-size: 7rem;
   }
 
@@ -344,7 +351,7 @@ background: none;
     background-size: 60%;
   }
 
-  .section2_content h1 {
+  .section2_content h2 {
     font-size: 6rem;
   }
 
@@ -414,7 +421,7 @@ background: none;
   text-align: center;
 }
 
-.section3_header-container h1 {
+.section3_header-container h2 {
   font-family: RalewayBold, sans-serif;
   font-size: 6rem;
   color: white;
@@ -429,7 +436,7 @@ background: none;
     background-position: center top;
   }
 
-  .section3_header-container h1 {
+  .section3_header-container h2 {
     margin-top: 5%;
     margin-bottom: 10%;
     margin-right: 0;
@@ -472,7 +479,7 @@ background: none;
   margin-bottom: 3%;
 }
 
-#section4 .section4_header h1 {
+#section4 .section4_header h2 {
   font-family: RalewayBold, sans-serif;
   font-size: 6rem;
   color: #262626;
@@ -563,7 +570,7 @@ background: none;
   padding: 10% 0 13%;
 }
 
-#section4b h1 {
+#section4b h2 {
   font-family: RalewayBold, sans-serif;
   font-size: 6rem;
   color: #262626;
@@ -648,7 +655,7 @@ background: none;
   margin-bottom: 3%;
 }
 
-#section5 .section5_header h1 {
+#section5 .section5_header h2 {
   font-family: RalewayBold, sans-serif;
   font-size: 6rem;
   margin-bottom: 3rem;
@@ -666,14 +673,38 @@ background: none;
 #section5 .section5_img-row > div {
   position: relative;
 }
+.blog-content{
+  position:relative;
+}
+.blog-date{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-family: RalewayBold, sans-serif;
+  font-size: 2rem;
+  width: 7rem;
+  background-color: rgba(5, 5, 5, 0.4);
+  border-radius: 6px;
+}
+.blog-date p{
+  margin: 0;
+}
+.blog-date p:first-child{
+  font-size: 4rem;
+  margin-top: -10px;
+
+}
+.blog-date p:last-child{
+  font-size: 2.7rem;
+  margin-top: -10px;
+}
 
 .blog-hover {
   position: absolute;
   width: 100%;
   height: 100%;
-  padding-right: 30px;
-  opacity: 0;
   transition: all ease 0.5s;
+  opacity: 0;
 }
 
 .blog-hover:hover {
@@ -681,14 +712,32 @@ background: none;
 }
 
 .blog-hover-content {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
-  background-color: rgba(247, 43, 59, 0.7);
+  background: linear-gradient(rgba(255,255, 255, 0.1), rgba(5, 5, 5, 0.8));
+}
+.blog-hover-content a{
+  font-family: RalewayBold, sans-serif;
+  font-size: 2rem;
+  position: absolute;
+  left: 20px;
+  bottom: 60px;
+  color: white;
+  text-align: left;
+}
+.blog-hover-content p{
+  font-family: RalewayThin, sans-serif;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: white;
+  text-align: left;
 }
 
-.blog-hover-content i {
-  margin: 30% auto;
-  font-size: 9rem;
+.section5_btn-row-3{
+  margin-top: 6%;
+  margin-bottom: 4%;
 }
 
 #section5 .section5_btn {
@@ -717,11 +766,37 @@ background: none;
   #section5 img {
     margin-bottom: 2rem;
   }
+  .blog-date {
+    left: 45%;
+  }
+  .blog-hover{
+    padding: 0 0rem 2rem;
+    top: 0;
+  }
+  .blog-hover-content{
+    max-width: 370px;
+    margin: 0 auto;
+  }
+  .blog-hover-content a,
+  .blog-hover-content p{
+    left: 20%;
+  }
 }
-
-@media screen and (max-width: 768px) {
-  .blog-hover {
-    display: none;
+@media screen and (max-width: 450px) {
+  .blog-date {
+    left: 3rem;
+  }
+  .blog-hover-content a,
+  .blog-hover-content p{
+    left: 2rem;
+  }
+  .blog-date p:first-child{
+    font-size: 3rem;
+    margin: 0;
+  }
+  .blog-date p:last-child{
+    font-size: 2rem;
+    margin: 0;
   }
 }
 
@@ -742,7 +817,7 @@ background: none;
   margin-bottom: 3%;
 }
 
-#section6 .section6_header h1 {
+#section6 .section6_header h2 {
   font-family: RalewayBold, sans-serif;
   font-size: 6rem;
   margin-bottom: 3rem;

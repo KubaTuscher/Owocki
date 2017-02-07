@@ -24,7 +24,7 @@
   });
 
   //change icon in small nav
-  $('.fa').click(function() {
+  $('#section1 .fa').click(function() {
     $(this).toggleClass('fa-bars');
   });
 
